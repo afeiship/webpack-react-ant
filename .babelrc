@@ -1,0 +1,37 @@
+{
+  "presets": [
+    "es2015",
+    "react",
+    "stage-0"
+  ],
+  "plugins": [
+    "transform-array-from",
+    "transform-class-properties",
+    "transform-es2015-spread",
+    "transform-object-rest-spread",
+    "transform-decorators-legacy",
+    [
+      "module-resolver",
+      {
+        "root": [
+          "."
+        ],
+        "alias": {
+          "node_modules": "./node_modules",
+          "images": "./src/assets/images",
+          "components": "./src/components",
+          "styles": "./src/components/styles",
+          "services": "./src/components/services",
+          "scripts": "./src/components/scripts",
+          "mixins": "./src/components/mixins"
+        }
+      }
+    ],
+    [
+      "import",
+      {
+        "libraryName": "antd"
+      }
+    ]
+  ]
+}

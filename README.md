@@ -23,6 +23,7 @@ npm run start
 + [x] ant-design optmize
 + [x] add spinkit for app
 + [ ] theme customize
++ [ ] use pace for app-loader
 
 ## resources:
 + https://ant.design/docs/react/introduce-cn

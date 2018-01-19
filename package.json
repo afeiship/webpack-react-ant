@@ -36,6 +36,8 @@
     "antd": "^3.1.1",
     "classnames": "^2.2.5",
     "http-rest-config": "github:afeiship/http-rest-config",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
     "mixin-decorator": "github:afeiship/mixin-decorator",
     "next-axios": "github:afeiship/next-axios",
     "next-date": "github:afeiship/next-date",
@@ -58,6 +60,7 @@
   },
   "devDependencies": {
     "add-asset-html-webpack-plugin": "^2.1.2",
+    "antd-sorter-webpack-plugin": "github:afeiship/antd-sorter-webpack-plugin",
     "autoprefixer": "^7.1.3",
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
@@ -85,6 +88,7 @@
     "image-webpack-loader": "^3.3.1",
     "img-loader": "^2.0.0",
     "import-glob-loader": "^1.1.0",
+    "json-asset-webpack-plugin": "^1.3.1",
     "node-sass": "^4.5.3",
     "postcss-loader": "^1.3.3",
     "react": "^15.6.1",
@@ -98,7 +102,9 @@
     "svg-inline-loader": "^0.8.0",
     "url-loader": "^0.5.9",
     "webpack": "^3.5.5",
+    "webpack-assets-manifest": "^1.0.0",
     "webpack-dev-server": "^2.10.0",
+    "webpack-manifest-plugin": "^1.3.2",
     "webpack-merge": "^4.1.0",
     "yargs": "^10.0.3"
   }

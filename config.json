@@ -1,5 +1,6 @@
 {
   "port": "9311",
+  "publicPath": "https://cdn.example.com/assets/",
   "vendors": [
     "next-js-core2",
     "next-react-redux",

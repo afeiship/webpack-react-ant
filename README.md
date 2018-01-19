@@ -22,6 +22,7 @@ npm run start
 + [x] HtmlWebpack -> webpack favico.ico
 + [x] ant-design optmize
 + [x] add spinkit for app
++ [ ] theme customize
 
 ## resources:
 + https://ant.design/docs/react/introduce-cn

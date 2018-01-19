@@ -6,14 +6,20 @@ import autoprefixer from 'autoprefixer';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import AddAssetHtmlPlugin from 'add-asset-html-webpack-plugin';
 import ScriptsInjectorPlugin from 'scripts-injector-webpack-plugin';
+import AntdSorterWebpackPlugin from 'antd-sorter-webpack-plugin';
 import {argv} from 'yargs';
 import config from '../config.json';
 
 const argEnv = argv.env || 'dev';
-
+const extractCss = new ExtractTextPlugin('styles/[name]-[hash].css');
+const extractAntd = new ExtractTextPlugin('antd/[name]-[hash].css');
 
 export default {
-  entry: './index.js',
+  context: resolve(__dirname, '../src'),
+  entry: {
+    'app': './index.js',
+    'antd': `./components/styles/antd/customize_${argEnv}.less`
+  },
   output: {
     filename: '[name]-[hash:6].bundle.js',
     path: resolve(__dirname, '../dist')
@@ -21,7 +27,6 @@ export default {
   resolve: {
     extensions: ['.js', '.json', '.scss', '.css'],
   },
-  context: resolve(__dirname, '../src'),
   module: {
     rules: [
       {
@@ -31,7 +36,7 @@ export default {
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
+        use: extractCss.extract({
           fallback: 'style-loader',
           use: ['css-loader', 'postcss-loader']
         })
@@ -43,9 +48,16 @@ export default {
       },
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
+        use: extractCss.extract({
           fallback: 'style-loader',
           use: ['css-loader', 'postcss-loader', 'sass-loader']
+        })
+      },
+      {
+        test: /\.less$/,
+        use: extractAntd.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'postcss-loader', 'less-loader']
         })
       },
       {
@@ -71,7 +83,8 @@ export default {
       replacer: '<!--APP_LOADER-->',
       path: resolve(__dirname, '../src/components/others/app-loader.html')
     }),
-    new ExtractTextPlugin('[name]-[hash].css'),
+    extractAntd,
+    extractCss,
     new webpack.ProvidePlugin({
       React: 'react',
       ReactDOM: 'react-dom',
@@ -88,6 +101,7 @@ export default {
       title: 'Hot Module Replacement',
       libs: config[argEnv].libs
     }),
+    new AntdSorterWebpackPlugin(),
     new AddAssetHtmlPlugin({
       includeSourcemap: false,
       filepath: resolve(__dirname, '../dist/vendors/vendors.*.js')

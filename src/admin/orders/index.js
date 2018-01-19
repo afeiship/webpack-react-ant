@@ -1,10 +1,5 @@
 import AppBase, {$api, $store, $app, $config} from 'components/scripts/index';
 import {Table, Icon, Input, Card, Row, Col, Button, Menu, Dropdown, Select} from 'antd';
-import {
-  HashRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
 
 const Option = Select.Option;
 

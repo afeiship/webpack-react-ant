@@ -35,7 +35,10 @@ export default class extends AppBase {
         <section className="route-wrapper">
           <Route exact path="/" component={Login}/>
           <Route path="/admin" component={Admin}/>
-          <section className="modal-container"> {/*<MODAL_START />*/} {/*<MODAL_END />*/}</section>
+          <section className="modal-container">
+            {/*<MODAL_START />*/}
+            {/*<MODAL_END />*/}
+          </section>
         </section>
       </Router>
     );

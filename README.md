@@ -21,7 +21,7 @@ npm run start
 + [ ] yeoman for module/special module ( create 50%+ code)
 + [ ] ant-pop-delte btn?
 + [ ] ant-toggle-button ?
-+ [ ] a modal.json, when yeoman create componet, will append to App Modal.container
++ [ ] a modal.json, when yeoman create componet, will append to App Modal.container[MODAL_START/END]
 
 ## features:
 + [x] spa 

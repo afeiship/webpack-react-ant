@@ -19,9 +19,10 @@ npm run start
 + [ ] controller-abstract-index / abstract-form / basic-form
 + [ ] normalize ant-form controller( [ checkbox->checked + onchange,  SearchInput->onChange/onSearch?])
 + [ ] yeoman for module/special module ( create 50%+ code)
++ [ ] ant-pop-delte btn?
++ [ ] ant-toggle-button ?
 
-
-## feature:
+## features:
 + [x] spa 
 + [x] webpack 3.x
 + [x] next-redux-base
@@ -31,7 +32,7 @@ npm run start
 + [x] HtmlWebpack -> webpack favico.ico
 + [x] ant-design optmize
 + [x] add spinkit for app
-+ [ ] theme customize
++ [x] theme customize
 + [ ] use pace for app-loader
 
 ## resources:

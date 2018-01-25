@@ -12,6 +12,15 @@ npm run build
 npm run start
 ```
 
+## ideas:
++ [ ] rn-ant-uploader ( api/thumbnail and ..)
++ [ ] curd + module.config.js (fileds/moduleName/actions:['index','show','edit','add'])
++ [ ] table-filter
++ [ ] controller-abstract-index / abstract-form / basic-form
++ [ ] normalize ant-form controller( [ checkbox->checked + onchange,  SearchInput->onChange/onSearch?])
++ [ ] yeoman for module/special module ( create 50%+ code)
+
+
 ## feature:
 + [x] spa 
 + [x] webpack 3.x

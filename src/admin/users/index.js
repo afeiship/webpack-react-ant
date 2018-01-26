@@ -10,6 +10,7 @@ import Add from './add';
 import Edit from './edit';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+
 export default class extends React.Component {
 
   state = {

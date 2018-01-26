@@ -23,6 +23,7 @@ npm run start
 + [ ] ant-toggle-button ?
 + [ ] a modal.json, when yeoman create componet, will append to App Modal.container[MODAL_START/END]
 + [ ] ant-select[ items/key/value ] wrapper
++ [ ] how about use @config/@module import our _config.js
 
 ## features:
 + [x] spa 

@@ -1,4 +1,7 @@
-import AppBase, {$api, $store, $app, $config} from 'components/scripts/index';
+import AppBase, {
+  $api, $store, $app, $config,
+  AntAbstractForm
+} from 'components/scripts/index';
 import {Table, Icon, Input, Card, Row, Col, Button, Menu, Dropdown, Select} from 'antd';
 
 const Option = Select.Option;
@@ -64,6 +67,10 @@ export default class extends React.Component {
     this.load(nx.mix(data, {
       pageNum: current - 1
     }));
+  };
+
+  _onClickTest = e =>{
+    console.log('click test');
   };
 
 
@@ -170,8 +177,37 @@ export default class extends React.Component {
       }
     ];
 
+    const antFormItems = [
+      {
+        field:'name',
+        component: Input,
+        label:'名字',
+        props:{
+          placeholder:'name!'
+        }
+      },
+      {
+        field:'phone',
+        component: Input,
+        label:'电话',
+        props:{
+          placeholder:'phone!'
+        }
+      },
+      {
+        field:'my-area',
+        label:'我的地盘',
+        component: Input.TextArea,
+        props:{
+          placeholder:'my area!'
+        }
+      }
+    ];
+
     return (
       <Card title={`订单（${total}）`} bordered={false}>
+        <AntAbstractForm items={antFormItems} />
+        <Button onClick={this._onClickTest}>Test Ant Form</Button>
         <Table columns={columns} dataSource={data} rowKey="id"
                onChange={this._onTableChange}
                pagination={{total, current: (pageNum + 1), pageSize}}/>

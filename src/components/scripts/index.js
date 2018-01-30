@@ -22,5 +22,6 @@ export const $date = require('next-date');
 
 /*===components start===*/
 export const TestComp = require('./test-comp').default;
+export const AntAbstractForm = require('./ant-abstract-form').default;
 /*===components end===*/
 

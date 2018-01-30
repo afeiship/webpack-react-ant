@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <title>Hello React! (production)</title>
+    <link href="//cdn.bootcss.com/spinkit/1.2.5/spinkit.min.css" rel="stylesheet" media="screen">
+    <% for(var i = 0; i < htmlWebpackPlugin.files.css.sort().length; i++) { %>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css[i] %>">
+    <% } %>
+
+</head>
+<body>
+<main id="app">
+    <!--APP_LOADER-->
+</main>
+<script type="text/javascript" src="http://org2gwhgm.bkt.clouddn.com/app-cache.min.js"></script>
+
+<script>
+
+var appCache = new AppCache({ prefix:'__weiapi__',version:'123456'});
+  appCache.load("<%= [
+    htmlWebpackPlugin.options.libs['react'],
+    htmlWebpackPlugin.options.libs['react-dom']
+  ].concat(htmlWebpackPlugin.files.js) %>".split(','),{
+    success:function(resp){
+      console.log($(document.body),'page1 loaded!');
+    }
+  });
+</script>
+<!-- Dependencies -->
+</body>
+</html>

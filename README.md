@@ -25,6 +25,11 @@ npm run start
 + [ ] ant-select[ items/key/value ] wrapper
 + [ ] how about use @config/@module import our _config.js
 + [ ] ajax error exception handler.
++ [ ] use pace for app-loader
++ [ ] currentRow memory
++ [ ] page session
++ [ ] 403/4/500 page
++ [ ] optimize with app-cache[Css/Js]
 
 ## features:
 + [x] spa 
@@ -37,7 +42,6 @@ npm run start
 + [x] ant-design optmize
 + [x] add spinkit for app
 + [x] theme customize
-+ [ ] use pace for app-loader
 
 ## resources:
 + https://ant.design/docs/react/introduce-cn

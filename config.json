@@ -53,17 +53,18 @@
       "react": "//cdn.bootcss.com/react/15.6.1/react.js",
       "react-dom": "//cdn.bootcss.com/react/15.6.1/react-dom.js"
     },
-    "proxy": {
-      "/api": {
-        "target": "http://120.27.13.225:80",
+    "proxy": [
+      {
+        "context": [
+          "/admin",
+          "/user",
+          "/anon"
+        ],
+        "target": "http://smartpark.wenweikeji.com:80",
         "changeOrigin": true,
-        "pathRewrite": {
-          "^/": "/",
-          "[0-9]+": ""
-        },
         "secure": false
       }
-    }
+    ]
   },
   "prd": {
     "libs": {

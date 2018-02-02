@@ -10,22 +10,31 @@ import Admin from './admin';
 export default class extends AppBase {
 
   static initialState() {
+    const {currentList} = $store.session;
     const {login} = $store.local;
     return {
       local: {
         login: login || null
       },
       memory: {
-        modalUser: false,
-        modalUserQuery: false
+        currentRow: {},
+      },
+      session: {
+        currentList: currentList || []
       }
-    }
+    };
   }
 
   componentDidMount() {
-    const { root } = this.refs;
+    const {root} = this.refs;
     AppBase.$.memory = {
       history: root.history
+    };
+  }
+
+  command(inName, inData) {
+    AppBase.$.memory = {
+      [nx.camelize(inName)]: inData
     };
   }
 

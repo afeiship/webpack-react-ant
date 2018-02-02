@@ -14,20 +14,6 @@ const Http = nx.declare({
     }
   },
   methods: {
-    getBearerToken: function () {
-      const {login} = AppBase.$.local;
-      if (login) {
-        return `Bearer ${login.token}`;
-      }
-      return null;
-    },
-    setRequestInterceptor: function () {
-      this.axios.interceptors.request.use((config) => {
-        const bearerToken = this.getBearerToken();
-        bearerToken && nx.mix(config.headers.common, {Authorization: bearerToken});
-        return config;
-      });
-    },
     contentType: function () {
       return 'application/json; charset=utf-8';
     },

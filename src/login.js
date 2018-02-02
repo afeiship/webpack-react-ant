@@ -22,8 +22,7 @@ export default Form.create()(class extends React.Component {
     e.preventDefault();
     form.validateFields((err, values) => {
       if (!err) {
-        $route.push('/admin/users/index');
-        // this.signin(values);
+        $route.push('/admin/orders/index');
       }
     });
   };
@@ -57,16 +56,15 @@ export default Form.create()(class extends React.Component {
                 })(<Input prefix={<Icon type="lock" style={{fontSize: 13}}/>} type="password" placeholder="Password"/>)
               }
             </FormItem>
-            <FormItem className="tr mt10">
+            <FormItem className="mt10">
               <Button
                 size="large"
                 type="primary"
-                className="mr5"
-                htmlType="submit"
-              >
+                className="wp-10"
+                onClick={this._onSubmit}
+                htmlType="submit">
                 登录
               </Button>
-              <Button size="large">取消</Button>
             </FormItem>
           </Form>
         </Card>

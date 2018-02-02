@@ -1,10 +1,13 @@
 /*===default start===*/
-export default require('./app-base').default;
+const AppBase = require('./app-base').default;
+export default AppBase;
+export const $ = AppBase.$;
 /*===default start===*/
 
 
 /*===mixins start===*/
-export const OnChangeMixin = require('mixins/on-change').default;
+export const OnChangeMixin = require('react-mixin-on-change').default(AppBase);
+export const AntTableFilterMixin=require('mixins/ant-table-filter').default;
 /*===mixins end===*/
 
 
@@ -21,7 +24,8 @@ export const $date = require('next-date');
 
 
 /*===components start===*/
-export const TestComp = require('./test-comp').default;
-export const AntAbstractForm = require('./ant-abstract-form').default;
+export const AntForm = require('./ant-form').default;
+export const AntSelect = require('./ant-select').default;
+export const AntAbstractControllerIndex = require('./ant-abstract-controller-index').default;
 /*===components end===*/
 

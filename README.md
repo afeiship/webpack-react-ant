@@ -32,6 +32,7 @@ npm run start
 + [ ] optimize with app-cache[Css/Js]
 + [ ] abs-form/abs-index 
 + [ ] refresh edit record [edit/cacel/reset] action
++ [ ] @config('./_config') to load config file
 
 ## curd route:
 ```conf

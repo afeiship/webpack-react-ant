@@ -1,8 +1,5 @@
 import AppBase, {$api, $store} from 'components/scripts/index';
-import {
-  HashRouter as Router,
-  Route,
-} from 'react-router-dom';
+import {HashRouter as Router, Route} from 'react-router-dom';
 
 import Login from './login';
 import Admin from './admin';
@@ -18,6 +15,7 @@ export default class extends AppBase {
       },
       memory: {
         currentRow: {},
+        currentIndex: 0
       },
       session: {
         currentList: currentList || []

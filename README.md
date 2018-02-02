@@ -30,6 +30,20 @@ npm run start
 + [ ] page session
 + [ ] 403/4/500 page
 + [ ] optimize with app-cache[Css/Js]
++ [ ] abs-form/abs-index 
+
+## curd route:
+```conf
+/admin/parking-admins/:index
+/admin/parking-admins/:add
+/admin/parking-admins/:show/:id
+/admin/parking-admins/:edit/:id
+
+[files:]
+index
+form [add/edit]
+show [show]
+```
 
 ## features:
 + [x] spa 

@@ -6,7 +6,7 @@ import AppBase, {
 } from 'components/scripts/index';
 
 export default class extends AntAbstractControllerIndex {
-  apiKey: 'user_index';
+  apiKey = 'user_index';
   pagination = {
     current: 'pageNum',
     rows: 'rows',

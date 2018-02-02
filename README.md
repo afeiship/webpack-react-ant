@@ -35,10 +35,12 @@ npm run start
 
 ## curd route:
 ```conf
-/admin/parking-admins/:index
-/admin/parking-admins/:add
-/admin/parking-admins/:show/:id
-/admin/parking-admins/:edit/:id
+/admin/users/:action/:id
+
+/admin/users/index
+/admin/users/add
+/admin/users/show/:id
+/admin/users/edit/:id
 
 [files:]
 index

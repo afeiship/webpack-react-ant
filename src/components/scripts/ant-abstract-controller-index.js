@@ -1,4 +1,4 @@
-import AppBase, {$api, $app, $date, $store} from 'components/scripts/index';
+import AppBase, {$, $api, $app, $date, $store} from 'components/scripts/index';
 import {Table, Icon, Card, Button, Modal} from 'antd';
 
 
@@ -14,11 +14,12 @@ export default class extends React.Component {
   };
 
 
-  get defaults(){
+  get defaults() {
     return {
       [this.pagination.current]: 1
     };
   }
+
   set request(inValue) {
     this._request = inValue;
   }
@@ -62,7 +63,7 @@ export default class extends React.Component {
   load(inData) {
     $api[this.apiKey](inData).then(({data, filter, total}) => {
       this.setState({data, total});
-      AppBase.$.session = {currentList: data};
+      $.session = {currentList: data};
     });
   }
 
@@ -87,17 +88,17 @@ export default class extends React.Component {
 
   _onChange = (inCurrentPage) => {
     const pagination = {[this.pagination.current]: inCurrentPage};
-    AppBase.$.session = pagination;
+    $.session = pagination;
     this.load(pagination);
   };
 
   render() {
-    const {columns, data, selectedRowKeys, pagination}  = this.state;
-    const {total, current} = this.pagination;
+    const { columns, data, selectedRowKeys }  = this.state;
+    const { total, current } = this.pagination;
 
     return (
       <Card title={ this.title } extra={this.extra}>
-        {this.topView()}
+        { this.topView() }
         <Table
           size={this.size}
           rowSelection={this.rowSelection}
@@ -111,7 +112,7 @@ export default class extends React.Component {
             current: this.state[current],
             onChange: this._onChange
           }}/>
-        {this.bottomView()}
+        { this.bottomView() }
       </Card>
     );
   }

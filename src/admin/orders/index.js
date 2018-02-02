@@ -1,4 +1,5 @@
 import AppBase, {
+  $,
   $api, $store, $app, $config,
   AntForm,
   AntAbstractControllerIndex

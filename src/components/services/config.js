@@ -4,14 +4,17 @@ export default class {
   static APIS = {
     baseUrl: `//${location.host}`,
     items: {
-      'user_index': ['get', '/admin/getAdminUserList'],
-      'user_create': ['post', '/admin/addAdminUser'],
-      'user_update': ['put', '/admin/updateAdminUser'],
-
-      'banner_index': ['get', '/system/banners'],
-      'banner_create': ['post', '/system/banner'],
-      'banner_delete': ['delete', '/system/banner/{id}'],
-      'banner_update': ['put', '/system/banner/{id}'],
+      '/admin': {
+        'user_index': ['get', '/getAdminUserList'],
+        'user_create': ['post', '/addAdminUser'],
+        'user_update': ['put', '/updateAdminUser'],
+      },
+      '/system': {
+        'banner_index': ['get', '/banners'],
+        'banner_create': ['post', '/banner'],
+        'banner_delete': ['delete', '/banner/{id}'],
+        'banner_update': ['put', '/banner/{id}'],
+      }
     }
   };
 }

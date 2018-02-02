@@ -31,6 +31,7 @@ npm run start
 + [ ] 403/4/500 page
 + [ ] optimize with app-cache[Css/Js]
 + [ ] abs-form/abs-index 
++ [ ] refresh edit record [edit/cacel/reset] action
 
 ## curd route:
 ```conf

@@ -1,5 +1,4 @@
 import AppBase, {
-  $,
   $api, $store, $app, $config,
   AntForm,
   AntAbstractControllerIndex
@@ -38,5 +37,11 @@ export default class extends AntAbstractControllerIndex {
         dataIndex: 'nickname'
       }
     ];
+  }
+
+  constructor(props){
+    super(props);
+    this.$config = require('./_config').default(this);
+    console.log(this.$config);
   }
 }

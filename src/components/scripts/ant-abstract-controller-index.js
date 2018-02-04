@@ -58,6 +58,7 @@ export default class extends React.Component {
       [this.pagination.current]: 1,
       [this.pagination.total]: 0
     };
+    this.$config = require('./_config').default(this);
   }
 
   load(inData) {

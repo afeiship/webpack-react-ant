@@ -27,6 +27,12 @@ export default {
   resolve: {
     extensions: ['.js', '.json', '.scss', '.css'],
     alias:{
+      images: resolve(__dirname, '../src/assets/images'),
+      components: resolve(__dirname, '../src/components'),
+      styles: resolve(__dirname, '../src/components/styles'),
+      services: resolve(__dirname, '../src/components/services'),
+      scripts: resolve(__dirname, '../src/components/scripts'),
+      data: resolve(__dirname, '../src/assets/data'),
       mixins: resolve(__dirname, '../src/components/mixins'),
       admin: resolve(__dirname, '../src/admin')
     }

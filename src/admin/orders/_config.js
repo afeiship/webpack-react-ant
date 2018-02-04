@@ -1,6 +1,6 @@
 export default function (inContext) {
   return {
-    name: 'user',
+    name: 'order',
     actions: [
       'add', 'edit', 'index', 'show', 'delete'
     ],

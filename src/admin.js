@@ -4,10 +4,12 @@ import {
   HashRouter as Router,
   Route,
 } from 'react-router-dom';
+import ReactDynamicRouter from 'react-dynamic-router';
 
 import UserIndex from './admin/users/index';
 import UserShow from './admin/users/show';
 import OrderIndex from './admin/orders/index';
+import { $config } from 'components/scripts/index';
 
 
 export default class extends React.Component {
@@ -67,8 +69,7 @@ export default class extends React.Component {
             <a href="#">Logout</a>
           </Header>
           <Content style={{margin: '24px 16px 0'}}>
-            <Route path={`${match.url}/users/index`} component={UserIndex}/>
-            <Route path={`${match.url}/orders/index`} component={OrderIndex}/>
+            { ReactDynamicRouter.build( Route, $config.ROUTES ) }
           </Content>
           <Footer style={{textAlign: 'center'}}>
             Admin @Power by Fei.

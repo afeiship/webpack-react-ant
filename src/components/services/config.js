@@ -17,6 +17,11 @@ export default class {
       }
     }
   };
+
+  static ROUTES = [
+    '/admin/users/index',
+    '/admin/orders/index'
+  ];
 }
 
 

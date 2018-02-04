@@ -26,13 +26,21 @@ export default {
   },
   resolve: {
     extensions: ['.js', '.json', '.scss', '.css'],
+    alias:{
+      mixins: resolve(__dirname, '../src/components/mixins'),
+      admin: resolve(__dirname, '../src/admin')
+    }
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         use: ['babel-loader'],
-        exclude: /node_modules/,
+        include: [
+          resolve(__dirname, "../src"),
+          resolve(__dirname, "../node_modules/mixin-decorator"),
+          resolve(__dirname, "../node_modules/react-dynamic-router")
+        ]
       },
       {
         test: /\.css$/,

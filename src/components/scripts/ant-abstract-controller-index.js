@@ -88,7 +88,7 @@ export default class extends React.Component {
 
   _onChange = (inCurrentPage) => {
     const pagination = {[this.pagination.current]: inCurrentPage};
-    AppBase.$ = pagination;
+    AppBase.$.session = pagination;
     this.load(pagination);
   };
 

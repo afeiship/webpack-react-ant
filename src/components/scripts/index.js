@@ -4,8 +4,6 @@ export default require('./app-base').default;
 
 
 /*===mixins start===*/
-export const OnChangeMixin = require('react-mixin-on-change').default;
-export const AntTableFilterMixin=require('mixins/ant-table-filter').default;
 /*===mixins end===*/
 
 

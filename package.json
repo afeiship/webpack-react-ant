@@ -47,6 +47,7 @@
     "next-store": "github:afeiship/next-store",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-dynamic-router": "github:afeiship/react-dynamic-router",
     "react-full-image": "github:afeiship/react-full-image",
     "react-mixin-on-change": "github:afeiship/react-mixin-on-change",
     "react-quill": "^1.2.3",

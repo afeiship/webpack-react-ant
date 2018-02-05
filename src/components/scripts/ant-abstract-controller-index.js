@@ -44,6 +44,14 @@ export default class extends React.Component {
     return [];
   }
 
+  get actions(){
+    return null;
+  }
+
+  get columns(){
+    return this.actions ? this.fields.concat(this.actions) : this.fields
+  }
+
   get actions() {
     return null;
   }
@@ -52,7 +60,7 @@ export default class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      columns: this.actions ? this.fields.concat(this.actions) : this.fields,
+      columns: this.columns,
       data: [],
       selectedRowKeys: [],
       [this.pagination.current]: 1,
@@ -64,7 +72,7 @@ export default class extends React.Component {
   load(inData) {
     $api[this.apiKey](inData).then(({data, filter, total}) => {
       this.setState({data, total});
-      AppBase.$.session = {currentList: data};
+      AppBase.$.session = { currentList: data };
     });
   }
 
@@ -98,7 +106,7 @@ export default class extends React.Component {
     const { total, current } = this.pagination;
 
     return (
-      <Card title={ this.title } extra={this.extra}>
+      <Card title={ this.title } extra={ this.extra }>
         { this.topView() }
         <Table
           size={this.size}

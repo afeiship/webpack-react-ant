@@ -1,6 +1,5 @@
 import AppBase, {
   $api, $store, $app, $config,
-  AntForm,
   AntAbstractControllerIndex
 } from 'components/scripts/index';
 
@@ -22,7 +21,6 @@ export default class extends AntAbstractControllerIndex {
       key: ''
     };
   }
-
 
   get fields() {
     return [

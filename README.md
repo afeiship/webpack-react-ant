@@ -26,13 +26,13 @@ npm run start
 + [ ] how about use @config/@module import our _config.js
 + [ ] ajax error exception handler.
 + [ ] use pace for app-loader
-+ [ ] currentRow memory
++ [x] currentRow memory
 + [ ] page session
 + [ ] 403/4/500 page
 + [ ] optimize with app-cache[Css/Js]
-+ [ ] abs-form/abs-index 
++ [x] abs-form/abs-index 
 + [ ] refresh edit record [edit/cacel/reset] action
-+ [ ] @config('./_config') to load config file
++ [x] @config('./_config') to load config file
 
 ## curd route:
 ```conf

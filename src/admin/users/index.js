@@ -111,8 +111,6 @@ export default class extends React.Component {
     return (
       <Card title={`用户管理(${total})`} bordered={false}
             extra={<Button type="primary" onClick={this._onAdd}>+ 添加新用户</Button>}>
-        <Table columns={columns} dataSource={data} rowKey="uid"
-               pagination={{total, current: current_page, onChange: this._onPageChange}}/>
         <Add onComplete={this.load.bind(this)}/>
         <ReactQuill value={this.state.text}
                     onChange={this._handleChange} />

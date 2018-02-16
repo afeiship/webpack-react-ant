@@ -20,7 +20,6 @@ export const $date = require('next-date');
 
 
 /*===components start===*/
-export const AntForm = require('./ant-form').default;
 export const AntSelect = require('./ant-select').default;
 export const AntAbstractControllerIndex = require('./ant-abstract-controller-index').default;
 /*===components end===*/

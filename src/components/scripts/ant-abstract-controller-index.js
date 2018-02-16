@@ -52,11 +52,6 @@ export default class extends React.Component {
     return this.actions ? this.fields.concat(this.actions) : this.fields
   }
 
-  get actions() {
-    return null;
-  }
-
-
   constructor(props) {
     super(props);
     this.state = {
@@ -67,6 +62,10 @@ export default class extends React.Component {
       [this.pagination.total]: 0
     };
     this.$config = require('./_config').default(this);
+  }
+
+  componentDidMount() {
+    this.load(this.request);
   }
 
   load(inData) {
@@ -81,10 +80,6 @@ export default class extends React.Component {
     this.load({
       [current]: this.state[current]
     });
-  }
-
-  componentDidMount() {
-    this.load(this.request);
   }
 
   topView() {

@@ -11,17 +11,6 @@
     "transform-object-rest-spread",
     "transform-decorators-legacy",
     [
-      "module-resolver",
-      {
-        "root": [
-          "."
-        ],
-        "alias": {
-          "node_modules": "./node_modules"
-        }
-      }
-    ],
-    [
       "import",
       {
         "libraryName": "antd"

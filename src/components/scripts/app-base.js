@@ -3,6 +3,11 @@ import {message, notification} from 'antd';
 
 // next plugins:
 import 'next-camelize';
+import 'next-param';
+import 'next-range';
+import 'next-timeago';
+import 'next-ant-build-items';
+import 'next-ant-fields-value';
 
 export default class extends ReduxAppBase {
   static notify(inMsg, inType) {

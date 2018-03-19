@@ -1,5 +1,5 @@
 {
-  "port": "9323",
+  "port": "9329",
   "publicPath": "https://cdn.example.com/assets/",
   "vendors": [
     "next-js-core2",
@@ -55,11 +55,9 @@
     "proxy": [
       {
         "context": [
-          "/admin",
-          "/user",
-          "/anon"
+          "/admin"
         ],
-        "target": "http://smartpark.wenweikeji.com:80",
+        "target": "http://dev.demo.com:80",
         "changeOrigin": true,
         "secure": false
       }

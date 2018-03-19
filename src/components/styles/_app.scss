@@ -5,4 +5,13 @@
 #app,
 .route-wrapper {
   height: 100%;
+  overflow: hidden;
+}
+
+button {
+  outline: none;
+}
+
+.opactiy-bg-text-5 {
+  background: rgba(0, 0, 0, 0.5);
 }

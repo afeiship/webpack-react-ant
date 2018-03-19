@@ -1,74 +1,67 @@
 import {Card, Form, Icon, Input, Button} from 'antd';
-import AppBase, {$api, $route} from 'components/scripts/index';
 import ReactFullImage from 'react-full-image';
 import bgImg from 'images/bg.jpg';
-const FormItem = Form.Item;
-
-
+import ReactAntForm from 'react-ant-form';
+import AppBase, {
+  $api, $route, $app,
+  ExmLogo
+} from 'components/scripts/index';
 export default Form.create()(class extends React.Component {
 
-  signin(inValue) {
-    $api.login(inValue).then(login => {
-      AppBase.$.local = {login};
-      AppBase.notify('Success!');
-      $route.push('/admin/users/index');
-    }, (error) => {
-      AppBase.notify('Not Admin', 'error');
-    });
-  }
+  state = {
+    formItems: [
+      {
+        field: 'username',
+        component: Input,
+        props: {
+          size: 'large',
+          placeholder: '用户名'
+        }
+      },
+      {
+        field: 'password',
+        component: Input,
+        props: {
+          size: 'large',
+          type: 'password',
+          placeholder: '密码'
+        }
+      }
+    ]
+  };
 
   _onSubmit = (e) => {
-    const {form} = this.props;
-    e.preventDefault();
-    form.validateFields((err, values) => {
-      if (!err) {
-        $route.push('/admin/orders/index');
-      }
-    });
+    console.log(e);
+    $app.successPush('登录成功', '/admin/dashboards/index');
   };
 
   render() {
-    const {getFieldDecorator, getFieldsError, getFieldError, isFieldTouched} = this.props.form;
-    // Only show error after a field is touched.
-    const usernameError = isFieldTouched('username') && getFieldError('username');
-    const passwordError = isFieldTouched('password') && getFieldError('password');
+    const formLayout = null;
 
     return (
-      <div className="login-wrapper">
+      <section className="login-view h100">
         <ReactFullImage src={bgImg}/>
-        <Card title="Admin login" className="login-view">
-          <Form layout="vertical" onSubmit={this._onSubmit}>
-            <FormItem
-              validateStatus={usernameError ? 'error' : ''}
-              help={usernameError || ''}>
-              {
-                getFieldDecorator('username', {
-                  rules: [{required: true, message: 'Please input your username!'}],
-                })(<Input prefix={<Icon type="user" style={{fontSize: 13}}/>} placeholder="Username"/>)
-              }
-            </FormItem>
-            <FormItem
-              validateStatus={passwordError ? 'error' : ''}
-              help={passwordError || ''}>
-              {
-                getFieldDecorator('password', {
-                  rules: [{required: true, message: 'Please input your Password!'}],
-                })(<Input prefix={<Icon type="lock" style={{fontSize: 13}}/>} type="password" placeholder="Password"/>)
-              }
-            </FormItem>
-            <FormItem className="mt10">
-              <Button
-                size="large"
-                type="primary"
-                className="wp-10"
-                onClick={this._onSubmit}
-                htmlType="submit">
-                登录
-              </Button>
-            </FormItem>
-          </Form>
-        </Card>
-      </div>
+        <div className="p20 bdr-10 body shadow-6 webkit-sassui-transform-center-xy t375">
+          <ExmLogo className="py20"/>
+          <div className="bg-f bdr-5 p30">
+            <ReactAntForm formLayout={null}
+                          submitLabel={null}
+                          submitProps={{
+                            className: 'wp-10 mb0',
+                            children: '登录',
+                            size: 'large',
+                            type: 'primary',
+                            htmlType: 'submit'
+                          }}
+                          onSubmit={this._onSubmit}
+                          items={this.state.formItems}/>
+            <footer hidden className="tc mt10 lrfix_ ft">
+              <span>还没有账号 <a href="#">注册</a></span>
+              <a href="#">忘记密码？</a>
+            </footer>
+          </div>
+        </div>
+      </section>
     );
   }
 

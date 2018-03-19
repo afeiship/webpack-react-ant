@@ -1,0 +1,29 @@
+.exm-route-tabs {
+  > .hd {
+    @include hlh(50px);
+    border-bottom: 1px solid #ccc;
+    background: #EBF0F4;
+    .left {
+      @extend .lfix_;
+      li {
+        margin-right: 14px;
+        a {
+          height: 50px;
+          border-bottom: 3px solid transparent;
+          @extend .f16, .b, .db, .c-gray;
+          &.active {
+            border-color: #1176C0;
+            @extend .c-blue;
+          }
+        }
+      }
+    }
+    .right {
+      // RIGHT:
+    }
+  }
+
+  > .bd {
+    @extend .p10, .bg-f;
+  }
+}

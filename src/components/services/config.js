@@ -19,8 +19,16 @@ export default class {
   };
 
   static ROUTES = [
-    '/admin/users/index',
-    '/admin/orders/index'
+    '/admin/orders/index',
+    '/admin/builders/index',
+    '/admin/building-businesses/:state',
+    '/admin/account-settings/index',
+    '/admin/certificate-records/index',
+    '/admin/dashboards/index',
+    '/admin/illegal-records/index',
+    '/admin/newspaper-offices/index',
+    '/admin/notifications/index',
+    '/admin/truck-infomations/index',
   ];
 }
 

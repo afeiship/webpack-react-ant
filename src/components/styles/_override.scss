@@ -1,0 +1,38 @@
+/**_override Start**/
+
+.ant-menu-dark {
+  .ant-menu-item-group {
+    padding-left: 10px;
+
+    &-list {
+      margin-left: -10px;
+    }
+
+    &-title {
+      @extend .c-gray;
+    }
+  }
+
+  .ant-menu-item {
+    &,
+    .ant-badge {
+      @extend .c-gray, .f14;
+    }
+    &-selected {
+      > *,
+      .ant-badge{
+        color: #fff;
+      }
+    }
+  }
+}
+
+.ant-layout-header {
+  @extend .bg-blue-a;
+  &,
+  a {
+    @extend .c-f;
+  }
+}
+
+/**_override  End**/

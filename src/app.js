@@ -1,12 +1,17 @@
-import AppBase, {$api, $store} from 'components/scripts/index';
-import {HashRouter as Router, Route} from 'react-router-dom';
+import {HashRouter as Router, Route, Switch} from 'react-router-dom';
+import AppBase, {
+  $api, $store,
+  ExmModalSelectExhibition,
+} from 'components/scripts/index';
 
 import Login from './login';
 import Admin from './admin';
 
+
 export default class extends AppBase {
 
   static initialState() {
+    const hash = location.hash;
     const {currentList} = $store.session;
     const {login} = $store.local;
     return {
@@ -15,7 +20,10 @@ export default class extends AppBase {
       },
       memory: {
         currentRow: {},
-        currentIndex: 0
+        currentIndex: 0,
+        sidebarCollapsed: false,
+        activeRoute: hash.slice(1),
+        activeState: null
       },
       session: {
         currentList: currentList || []
@@ -44,6 +52,7 @@ export default class extends AppBase {
           <Route path="/admin" component={Admin}/>
           <section className="modal-container">
             {/*<MODAL_START />*/}
+            <ExmModalSelectExhibition />
             {/*<MODAL_END />*/}
           </section>
         </section>

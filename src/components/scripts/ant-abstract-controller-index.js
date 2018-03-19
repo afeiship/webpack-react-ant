@@ -1,5 +1,5 @@
 import AppBase, {$api, $app, $date, $store} from 'components/scripts/index';
-import {Table, Icon, Card, Button, Modal} from 'antd';
+import {Table, Icon, Card, Button, Tabs, Modal} from 'antd';
 
 
 export default class extends React.Component {
@@ -12,7 +12,6 @@ export default class extends React.Component {
     rows: 'rows',
     total: 'total'
   };
-
 
   get defaults() {
     return {
@@ -32,23 +31,15 @@ export default class extends React.Component {
     return null;
   }
 
-  get title() {
-    return 'LIST_TABLE';
-  }
-
-  get extra() {
-    return null;
-  }
-
   get fields() {
     return [];
   }
 
-  get actions(){
+  get actions() {
     return null;
   }
 
-  get columns(){
+  get columns() {
     return this.actions ? this.fields.concat(this.actions) : this.fields
   }
 
@@ -61,6 +52,7 @@ export default class extends React.Component {
       [this.pagination.current]: 1,
       [this.pagination.total]: 0
     };
+
     this.$config = require('./_config').default(this);
   }
 
@@ -71,7 +63,7 @@ export default class extends React.Component {
   load(inData) {
     $api[this.apiKey](inData).then(({data, filter, total}) => {
       this.setState({data, total});
-      AppBase.$.session = { currentList: data };
+      AppBase.$.session = {currentList: data};
     });
   }
 
@@ -82,14 +74,6 @@ export default class extends React.Component {
     });
   }
 
-  topView() {
-    return null;
-  }
-
-  bottomView() {
-    return null;
-  }
-
   _onChange = (inCurrentPage) => {
     const pagination = {[this.pagination.current]: inCurrentPage};
     AppBase.$.session = pagination;
@@ -97,27 +81,6 @@ export default class extends React.Component {
   };
 
   render() {
-    const { columns, data, selectedRowKeys }  = this.state;
-    const { total, current } = this.pagination;
-
-    return (
-      <Card title={ this.title } extra={ this.extra }>
-        { this.topView() }
-        <Table
-          size={this.size}
-          rowSelection={this.rowSelection}
-          bordered
-          selectedRowKeys={selectedRowKeys}
-          columns={columns}
-          dataSource={data}
-          rowKey={this.rowKey}
-          pagination={{
-            total: this.state[total],
-            current: this.state[current],
-            onChange: this._onChange
-          }}/>
-        { this.bottomView() }
-      </Card>
-    );
+    return this.layout ? this[`${this.layout}Layout`]() : null;
   }
 }

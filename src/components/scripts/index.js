@@ -20,7 +20,13 @@ export const $date = require('next-date');
 
 
 /*===components start===*/
-export const AntSelect = require('./ant-select').default;
 export const AntAbstractControllerIndex = require('./ant-abstract-controller-index').default;
+export const ExmLogo=require('./exm-logo').default;
+export const ExmModalSelectExhibition=require('./exm-modal-select-exhibition').default;
+export const ExmInfoCardItem=require('./exm-info-card-item').default;
+export const ExmSideMenu=require('./exm-side-menu').default;
+export const ExmHeader=require('./exm-header').default;
+export const ExmRouteTabs=require('./exm-route-tabs').default;
+export const ExmPageException=require('./exm-page-exception').default;
 /*===components end===*/
 

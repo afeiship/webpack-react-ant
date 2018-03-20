@@ -21,25 +21,8 @@ export default class {
     return null;
   }
 
-  tableView() {
-    const {columns, data, selectedRowKeys}  = this.state;
-    const {total, current} = this.pagination;
-
-    return (
-      <Table
-        size={this.size}
-        rowSelection={this.rowSelection}
-        bordered
-        selectedRowKeys={selectedRowKeys}
-        columns={columns}
-        dataSource={data}
-        rowKey={this.rowKey}
-        pagination={{
-          total: this.state[total],
-          current: this.state[current],
-          onChange: this._onChange
-        }}/>
-    )
+  bodyView() {
+    return null;
   }
 
   cardLayout() {

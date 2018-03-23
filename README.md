@@ -12,6 +12,16 @@ npm run build
 npm run start
 ```
 
+## deploy to server:
+```apacheconfig
+0. 确保系统已安装 docker, docker-compose
+1. 执行本地代码更新 git pull
+2. 执行build, ./docker-build.sh
+3. 停止服务: docker-compose down
+4. 启动服务：docker-compose up -d 
+4. 测试：http://localhost:8081
+```
+
 ## ideas:
 + [ ] rn-ant-uploader ( api/thumbnail and ..)
 + [ ] curd + module.config.js (fileds/moduleName/actions:['index','show','edit','add'])

@@ -19,7 +19,7 @@ npm run start
 2. 执行build, ./docker-build.sh
 3. 停止服务: docker-compose down
 4. 启动服务：docker-compose up -d 
-4. 测试：http://localhost:8081
+4. 测试：http://localhost:9329
 ```
 
 ## ideas:

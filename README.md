@@ -8,8 +8,13 @@
 ```bash
 git clone https://github.com/afeiship/webpack-react-ant.git
 npm install --registry=https://registry.npm.taobao.org
+npm run dev
+```
+
+## build for production:
+```bash
+npm install --registry=https://registry.npm.taobao.org
 npm run build
-npm run start
 ```
 
 ## deploy to server:

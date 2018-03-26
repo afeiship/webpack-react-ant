@@ -27,8 +27,7 @@ export default class extends React.Component {
           width="250"
           trigger={null}
           collapsible
-          collapsed={sidebarCollapsed}
-          collapsedWidth="0">
+          collapsed={sidebarCollapsed}>
           <div className="slogen mb10 bg-blue-a tc py30">
             <ExmLogo />
           </div>

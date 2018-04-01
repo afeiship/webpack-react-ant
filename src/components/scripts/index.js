@@ -13,9 +13,9 @@ export const $config = require('services/config').default;
 export const $app = require('services/app').default;
 export const $http = require('services/http').default;
 export const $route = require('services/route').default;
+export const $modal = require('services/modal').default;
 export const $store = require('next-store');
 export const $date = require('next-date');
-
 /*===services end===*/
 
 
@@ -28,5 +28,8 @@ export const ExmSideMenu=require('./exm-side-menu').default;
 export const ExmHeader=require('./exm-header').default;
 export const ExmRouteTabs=require('./exm-route-tabs').default;
 export const ExmPageException=require('./exm-page-exception').default;
+
+
+export const ExmModalUserAdd=require('./modals/exm-modal-user-add').default;
 /*===components end===*/
 

@@ -53,6 +53,7 @@ export default class extends AppBase {
           <section className="modal-container">
             {/*<MODAL_START />*/}
             <ExmModalSelectExhibition />
+            <ExmModalUserAdd />
             {/*<MODAL_END />*/}
           </section>
         </section>

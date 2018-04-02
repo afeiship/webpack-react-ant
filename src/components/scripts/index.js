@@ -14,6 +14,7 @@ export const $app = require('services/app').default;
 export const $http = require('services/http').default;
 export const $route = require('services/route').default;
 export const $modal = require('services/modal').default;
+export const $kv = require('services/key-value').default;
 export const $store = require('next-store');
 export const $date = require('next-date');
 /*===services end===*/

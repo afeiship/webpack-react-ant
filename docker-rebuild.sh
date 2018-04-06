@@ -1,4 +1,11 @@
 #!/bin/bash
 
-docker run -it --rm -v $PWD:/work -w /work node bash /work/rebuild.sh
+## pull latest
+git pull
 
+## build
+docker run -it -v $PWD:/work -w /work node /work/build.sh
+
+## reload
+docker-compose down
+docker-compose up -d

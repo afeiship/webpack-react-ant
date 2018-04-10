@@ -43,8 +43,8 @@ npm run build
 + [ ] use pace for app-loader
 + [x] currentRow memory
 + [ ] page session
-+ [ ] 403/4/500 page
-+ [ ] optimize with app-cache[Css/Js]
++ [x] 403/4/500 page
++ [x] optimize with app-cache[Css/Js]
 + [x] abs-form/abs-index 
 + [ ] refresh edit record [edit/cacel/reset] action
 + [x] @config('./_config') to load config file
@@ -75,6 +75,7 @@ show [show]
 + [x] ant-design optmize
 + [x] add spinkit for app
 + [x] theme customize
++ [x] develop can use `node_modules` react/react-dom.js
 
 ## resources:
 + https://ant.design/docs/react/introduce-cn

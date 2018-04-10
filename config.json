@@ -1,5 +1,5 @@
 {
-  "port": "9329",
+  "port": "9999",
   "publicPath": "https://cdn.example.com/assets/",
   "vendors": [
     "next-js-core2",

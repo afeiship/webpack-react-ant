@@ -49,8 +49,8 @@
   },
   "dev": {
     "libs": {
-      "react": "//cdn.bootcss.com/react/15.6.1/react.js",
-      "react-dom": "//cdn.bootcss.com/react/15.6.1/react-dom.js"
+      "react": "/react/dist/react.js",
+      "react-dom": "/react-dom/dist/react-dom.js"
     },
     "proxy": [
       {

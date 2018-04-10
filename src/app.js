@@ -1,6 +1,7 @@
 import {HashRouter as Router, Route, Switch} from 'react-router-dom';
 import AppBase, {
   $api, $store,
+  ExmModalUserAdd,
   ExmModalSelectExhibition,
 } from 'components/scripts/index';
 

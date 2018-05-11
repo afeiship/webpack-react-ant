@@ -8,6 +8,7 @@ import 'next-range';
 import 'next-timeago';
 import 'next-ant-build-items';
 import 'next-ant-fields-value';
+import 'next-key-map';
 
 export default class extends ReduxAppBase {
   static notify(inMsg, inType) {

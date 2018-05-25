@@ -1,6 +1,6 @@
 import AppBase, {
   $api
-} from 'components/scripts/index';
+} from 'components';
 
 export default class {
   syncActiveState(e, index) {

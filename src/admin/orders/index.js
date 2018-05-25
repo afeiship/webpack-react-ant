@@ -1,7 +1,7 @@
 import AppBase, {
   $api, $store, $app, $config,
   AntAbstractControllerIndex
-} from 'components/scripts/index';
+} from 'components';
 
 export default class extends AntAbstractControllerIndex {
   apiKey = 'user_index';

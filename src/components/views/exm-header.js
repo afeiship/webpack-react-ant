@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import classNames from 'classnames';
 import {Layout, Menu, Icon, Badge} from 'antd';
 const {Header, Content, Footer, Sider} = Layout;
-import AppBase, {$api, $store} from 'components/scripts/index';
+import AppBase, {$api, $store} from 'components';
 
 export default class extends Component {
 

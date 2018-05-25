@@ -1,4 +1,4 @@
-import AppBase, {$config, $route} from 'components/scripts/index';
+import AppBase, {$config, $route} from 'components';
 
 export default class {
   static infoPush(inMsg) {

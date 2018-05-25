@@ -1,5 +1,5 @@
 import { Modal } from 'antd';
-import  AppBase, {$api} from 'components/scripts/index';
+import  AppBase, {$api} from 'components';
 
 export default class extends React.Component {
   render() {

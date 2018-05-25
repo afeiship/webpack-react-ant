@@ -1,4 +1,4 @@
-import  AppBase, {$api} from 'components/scripts/index';
+import  AppBase, {$api} from 'components';
 
 @mixin(['active-state', 'match'])
 export default class extends React.Component {

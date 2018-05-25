@@ -14,7 +14,7 @@ import AppBase, {
   ExmSideMenu,
   ExmHeader,
   ExmPageException
-} from 'components/scripts/index';
+} from 'components';
 
 
 export default class extends React.Component {

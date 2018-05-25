@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import classNames from 'classnames';
 import {Layout, Menu, Icon, Badge} from 'antd';
-import AppBase, {$config, $route} from 'components/scripts/index';
+import AppBase, {$config, $route} from 'components';
 
 
 export default class extends Component {

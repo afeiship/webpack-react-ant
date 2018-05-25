@@ -3,7 +3,7 @@ import AppBase, {
   $api, $store,
   ExmModalUserAdd,
   ExmModalSelectExhibition,
-} from 'components/scripts/index';
+} from 'components';
 
 import Login from './login';
 import Admin from './admin';

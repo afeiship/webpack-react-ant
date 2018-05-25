@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Row, Col, Menu, Icon} from 'antd';
 import AppBase, {
   $api, $store, ExmInfoCardItem
-} from 'components/scripts/index';
+} from 'components';
 
 export default class extends Component {
   render() {

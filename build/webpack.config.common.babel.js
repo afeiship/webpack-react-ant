@@ -18,23 +18,28 @@ export default {
   context: resolve(__dirname, '../src'),
   entry: {
     'app': './index.js',
-    'antd': `./components/styles/antd/customize_${argEnv}.less`
+    'antd': `./assets/styles/antd/customize_${argEnv}.less`
   },
   output: {
     filename: '[name]-[hash:6].bundle.js',
-    path: resolve(__dirname, '../dist')
+    path: resolve(__dirname, '../dist'),
+    publicPath: config[argEnv].publicPath,
   },
   resolve: {
     extensions: ['.js', '.json', '.scss', '.css'],
     alias:{
+      admin: resolve(__dirname, '../src/admin')
+      assets: resolve(__dirname, '../src/assets'),
       images: resolve(__dirname, '../src/assets/images'),
+      data: resolve(__dirname, '../src/assets/data'),
       components: resolve(__dirname, '../src/components'),
       styles: resolve(__dirname, '../src/components/styles'),
+      views: resolve(__dirname, '../src/components/views'),
+      interceptors: resolve(__dirname, '../src/components/interceptors'),
       services: resolve(__dirname, '../src/components/services'),
       scripts: resolve(__dirname, '../src/components/scripts'),
-      data: resolve(__dirname, '../src/assets/data'),
       mixins: resolve(__dirname, '../src/components/mixins'),
-      admin: resolve(__dirname, '../src/admin')
+      modals: resolve(__dirname, '../src/components/modals'),
     }
   },
   module: {
@@ -78,7 +83,7 @@ export default {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loader: 'url-loader',
         options: {
-          name: 'images/[name]-[hash:4].[ext]',
+          name: 'assets/images/[name]-[hash:4].[ext]',
           limit: 8192
         }
       },
@@ -86,8 +91,15 @@ export default {
         test: /\.(woff|eot|ttf)\??.*$/,
         loader: 'url-loader',
         options: {
-          name: 'fonts/[name]-[hash:4].[ext]',
+          name: 'assets/fonts/[name]-[hash:4].[ext]',
           limit: 8192
+        }
+      },
+      {
+        test: /\.(json)\??.*$/,
+        loader: 'url-loader',
+        options: {
+          name: 'assets/data/[name]-[hash:4].[ext]',
         }
       }
     ],

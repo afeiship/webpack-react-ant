@@ -1,4 +1,4 @@
-import AppBase, {$api, $app, $date, $store} from 'components/scripts/index';
+import AppBase, {$api, $app, $date, $store} from 'components';
 import {Table, Icon, Card, Button, Tabs, Modal} from 'antd';
 
 export default class {

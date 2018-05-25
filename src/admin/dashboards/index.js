@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Row, Col, Menu, Icon} from 'antd';
 import AppBase, {
   $api, $store, ExmInfoCardItem, AntAbstractControllerIndex
-} from 'components/scripts/index';
+} from 'components';
 
 @mixin(['pure-layout'])
 export default class extends AntAbstractControllerIndex {

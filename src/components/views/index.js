@@ -31,6 +31,6 @@ export const ExmRouteTabs=require('./exm-route-tabs').default;
 export const ExmPageException=require('./exm-page-exception').default;
 
 
-export const ExmModalUserAdd=require('./modals/exm-modal-user-add').default;
+export const ExmModalUserAdd=require('../modals/exm-modal-user-add').default;
 /*===components end===*/
 

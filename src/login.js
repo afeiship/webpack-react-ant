@@ -5,7 +5,7 @@ import ReactAntForm from 'react-ant-form';
 import AppBase, {
   $api, $route, $app,
   ExmLogo
-} from 'components/scripts/index';
+} from 'components';
 export default Form.create()(class extends React.Component {
 
   state = {

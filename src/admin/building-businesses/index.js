@@ -1,7 +1,7 @@
 import AppBase, {
   $api, $store, $app, $config,
   AntAbstractControllerIndex
-} from 'components/scripts/index';
+} from 'components';
 import {Table, Icon, Card, Input, Button, Tabs} from 'antd';
 
 

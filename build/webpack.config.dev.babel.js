@@ -25,6 +25,7 @@ export default merge(commonConfig, {
     headers: {
       "Access-Control-Allow-Origin": "*",
     },
+    host:'testadmin.treasurevision.cn',
     proxy: dev.proxy
   }
 });

@@ -11,10 +11,10 @@ import Admin from './admin';
 
 export default class extends AppBase {
 
-  static initialState() {
+  static initialState(inStore) {
     const hash = location.hash;
-    const {currentList} = $store.session;
-    const {login} = $store.local;
+    const {currentList} = inStore.session;
+    const {login} = inStore.local;
     return {
       local: {
         login: login || null
@@ -53,8 +53,8 @@ export default class extends AppBase {
           <Route path="/admin" component={Admin}/>
           <section className="modal-container">
             {/*<MODAL_START />*/}
-            <ExmModalSelectExhibition />
-            <ExmModalUserAdd />
+            <ExmModalSelectExhibition/>
+            <ExmModalUserAdd/>
             {/*<MODAL_END />*/}
           </section>
         </section>

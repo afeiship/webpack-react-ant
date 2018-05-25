@@ -28,7 +28,7 @@ export default {
   resolve: {
     extensions: ['.js', '.json', '.scss', '.css'],
     alias:{
-      admin: resolve(__dirname, '../src/admin')
+      admin: resolve(__dirname, '../src/admin'),
       assets: resolve(__dirname, '../src/assets'),
       images: resolve(__dirname, '../src/assets/images'),
       data: resolve(__dirname, '../src/assets/data'),

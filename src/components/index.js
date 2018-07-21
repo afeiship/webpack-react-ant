@@ -21,14 +21,14 @@ export const $date = require('next-date');
 
 
 /*===components start===*/
-export const AntAbstractControllerIndex = require('.views/ant-abstract-controller-index').default;
-export const ExmLogo=require('.views/exm-logo').default;
-export const ExmModalSelectExhibition=require('.views/exm-modal-select-exhibition').default;
-export const ExmInfoCardItem=require('.views/exm-info-card-item').default;
-export const ExmSideMenu=require('.views/exm-side-menu').default;
-export const ExmHeader=require('.views/exm-header').default;
-export const ExmRouteTabs=require('.views/exm-route-tabs').default;
-export const ExmPageException=require('.views/exm-page-exception').default;
+export const AntAbstractControllerIndex = require('views/ant-abstract-controller-index').default;
+export const ExmLogo=require('views/exm-logo').default;
+export const ExmModalSelectExhibition=require('views/exm-modal-select-exhibition').default;
+export const ExmInfoCardItem=require('views/exm-info-card-item').default;
+export const ExmSideMenu=require('views/exm-side-menu').default;
+export const ExmHeader=require('views/exm-header').default;
+export const ExmRouteTabs=require('views/exm-route-tabs').default;
+export const ExmPageException=require('views/exm-page-exception').default;
 
 
 export const ExmModalUserAdd=require('modals/exm-modal-user-add').default;

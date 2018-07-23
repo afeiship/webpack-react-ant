@@ -7,6 +7,14 @@ export default {
     filename: '[name].[hash].js',
     library: '[name]_library'
   },
+  module:{
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        use: ['babel-loader']
+      },
+    ]
+  },
   plugins: [
     new webpack.DllPlugin({
       path: path.resolve(__dirname, '../dist/vendors/manifest.json'),

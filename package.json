@@ -34,6 +34,7 @@
   "homepage": "https://github.com/afeiship/webpack-react-ant#readme",
   "dependencies": {
     "antd": "^3.2.3",
+    "array-from": "^2.1.1",
     "classnames": "^2.2.5",
     "http-rest-config": "github:afeiship/http-rest-config",
     "mixin-decorator": "github:afeiship/mixin-decorator",

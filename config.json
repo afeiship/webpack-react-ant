@@ -2,6 +2,8 @@
   "port": "9999",
   "publicPath": "https://cdn.example.com/assets/",
   "vendors": [
+    "antd/lib/alert",
+    "antd/lib/button",
     "next-js-core2",
     "next-react-redux",
     "classnames",

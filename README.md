@@ -66,7 +66,7 @@ show [show]
 
 ## features:
 + [x] spa 
-+ [x] webpack 3.x
++ [x] webpack 4.x
 + [x] next-redux-base
 + [x] image compress
 + [x] fonts/images to folder

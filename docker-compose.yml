@@ -1,9 +1,0 @@
-version: "3"
-services:
-    web:
-      image: nginx
-      volumes:
-        - ./deploy/nginx/conf.d:/etc/nginx/conf.d
-        - ./dist:/www
-      ports:
-        - "9023:80"

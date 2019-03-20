@@ -1,4 +1,4 @@
-# ant-docs:
+# webpack-react-ant
 
 
 ## install package:

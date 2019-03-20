@@ -1,9 +1,9 @@
-# webpack-react-spa
+# webpack-react-ant
 > Webpack for spa project.
 
 ## get-started:
 ```bash
-git clone https://github.com/afeiship/webpack-react-spa.git
+git clone https://github.com/afeiship/webpack-react-ant.git
 npm install
 npm run dev
 ```

@@ -9,5 +9,6 @@ namespace :app do
     sh 'curl https://codeload.github.com/afeiship/webpack-react-spa/zip/master -O -J -L'
     sh 'unzip -xo webpack-react-spa-master.zip'
     sh 'cp -R webpack-react-spa-master/{*,.*} .'
+    sh 'rm -rf webpack-react-spa-master*'
   end
 end

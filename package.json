@@ -1,0 +1,82 @@
+{
+  "name": "webpack-react-spa",
+  "version": "1.0.0",
+  "description": "Webpack for ant design.",
+  "main": "index.js",
+  "scripts": {
+    "upgrade": "./deploy/upgrade.sh",
+    "clean": "rimraf dist",
+    "dll": "cross-env NODE_ENV=production webpack -p --env.type=dll",
+    "predev": "npm run clean && npm run dll",
+    "prebuild:development": "npm run clean && npm run dll",
+    "prebuild": "npm run clean && npm run dll",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server",
+    "build:test": "cross-env NODE_ENV=test webpack -p",
+    "build": "cross-env NODE_ENV=production webpack -p",
+    "start": "node express.js",
+    "lint": "node_modules/.bin/eslint --ext .js src",
+    "lintfix": "node_modules/.bin/eslint --fix . --ext .js src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afeiship/webpack-react-spa.git"
+  },
+  "keywords": [
+    "webpack",
+    "react",
+    "pc",
+    "ant-design",
+    "site",
+    "website"
+  ],
+  "author": "afei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afeiship/webpack-react-spa/issues"
+  },
+  "homepage": "https://github.com/afeiship/webpack-react-spa#readme",
+  "dependencies": {
+    "array-from": "^2.1.1",
+    "classnames": "^2.2.5",
+    "http-rest-config": "github:afeiship/http-rest-config",
+    "mixin-decorator": "github:afeiship/mixin-decorator",
+    "next-axios": "github:afeiship/next-axios",
+    "next-js-core2": "github:afeiship/next-js-core2",
+    "next-react-redux": "github:afeiship/next-react-redux",
+    "next-store": "github:afeiship/next-store",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-full-image": "github:afeiship/react-full-image",
+    "react-imported-component": "^5.2.4",
+    "react-mixin-on-change": "github:afeiship/react-mixin-on-change",
+    "react-router": "^4.2.0",
+    "react-router-config": "^4.4.0",
+    "react-router-dom": "^4.2.2",
+    "test-privite": "git+ssh://git@gitee.com:finxos/test-privite.git",
+    "webkit-sass-functions": "github:afeiship/webkit-sass-functions",
+    "webkit-sass-generators": "github:afeiship/webkit-sass-generators",
+    "webkit-sass-mixins": "github:afeiship/webkit-sass-mixins",
+    "webkit-sass-reset": "github:afeiship/webkit-sass-reset",
+    "webkit-sassui-short-name": "github:afeiship/webkit-sassui-short-name",
+    "webkit-sassui-transform-center": "github:afeiship/webkit-sassui-transform-center"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.11.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "next-flatten": "github:afeiship/next-flatten",
+    "prettier": "^1.15.3",
+    "react-hmr-decorator": "afeiship/react-hmr-decorator",
+    "standard": "^12.0.1",
+    "webpack": "^4.28.2",
+    "webpack-app-kits": "github:afeiship/webpack-app-kits",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.2"
+  }
+}

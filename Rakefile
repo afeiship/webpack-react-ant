@@ -14,6 +14,5 @@ namespace :app do
     # replace file:
     File.write('./README.md', File.read('./README.md').gsub('webpack-react-spa', 'webpack-react-ant'))
     File.write('./package.json', File.read('./package.json').gsub('webpack-react-spa', 'webpack-react-ant'))
-    File.write('./README.md', File.read('./README.md').gsub('# webpack-react-ant', File.read('./docs/ant-docs.md')))
   end
 end

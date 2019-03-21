@@ -12,7 +12,8 @@ namespace :app do
     sh 'rm -rf webpack-react-spa-master*'
 
     # replace file:
-    File.write('./README.md', File.read('./README.md').gsub('webpack-react-spa', 'webpack-react-ant'))
-    File.write('./package.json', File.read('./package.json').gsub('webpack-react-spa', 'webpack-react-ant'))
+    Dir['./README.md','./package.json'].each do |file|
+      File.write(file, File.read(file).gsub('webpack-react-spa', 'webpack-react-ant'))
+    end
   end
 end

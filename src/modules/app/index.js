@@ -6,8 +6,7 @@ import { Button } from 'antd';
 @mixin(['on-change'])
 export default class extends React.Component {
   _toAdmin = (inEvent) => {
-    console.log('to admin');
-    $route.push('/admin/options/index');
+    $route.push('/dashboard');
   };
   render() {
     return (

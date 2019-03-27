@@ -7,7 +7,7 @@ export default [
     component: $loadable.load(() => import('./modules/app'))
   },
   {
-    path: '/admin/options/index',
-    component: $loadable.load(() => import('./modules/options/index'))
+    path: '/dashboard',
+    component: $loadable.load(() => import('./modules/app/dashboard'))
   }
 ];

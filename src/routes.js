@@ -4,10 +4,10 @@ export default [
   {
     path: '/',
     exact: true,
-    component: $loadable.load(() => import('./modules/app'))
+    component: $loadable.load(() => import('./modules/app/login'))
   },
   {
-    path: '/dashboard',
-    component: $loadable.load(() => import('./modules/app/dashboard'))
+    path: '/admin/orders/index',
+    component: $loadable.load(() => import('./modules/orders/index'))
   }
 ];

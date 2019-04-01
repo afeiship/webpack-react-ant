@@ -8,7 +8,7 @@ export default class extends React.Component {
       <Layout className="dashboard h100">
         <Layout>
           <Sider>
-            <div className="p20 row row-center lh-20">
+            <div className="p20 row row-center">
               <div className="img">
                 <img
                   width="40"

@@ -6,7 +6,7 @@ module.exports = {
       changeOrigin: true
     }
   },
-  vendors: ['classnames', 'antd', 'react-router', 'react-router-dom'],
+  vendors: ['classnames', 'react-router', 'react-router-dom'],
   development: {
     publicPath: '/',
     libs: {

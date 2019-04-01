@@ -9,3 +9,6 @@ package-lock.json
 .idea
 .vscode
 dist
+*.tar.gz
+*.zip
+Gemfile.lock

@@ -25,10 +25,11 @@ export default (inEnv) => {
         loaders.font()
       ])
     },
-    externals: configs.externals.react(),
+    externals: nx.mix(configs.externals.react(), configs.externals.moment()),
     optimization: configs.optimization(),
     performance: configs.performance(),
     plugins: nx.flatten([
+      plugins.bundleAnalyzer(),
       plugins.imagemin({
         mozJpeg: { quality: 75 },
         pngquant: { quality: '70-80' }

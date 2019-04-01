@@ -16,7 +16,7 @@ export default (inEnv) => {
     }),
     resolve: {
       alias: configs.alias({
-        '@ant-design/icons/lib/dist$': path.resolve(__dirname, '../src/modules/icons.js')
+        '@ant-design/icons/lib/dist$': path.resolve(__dirname, '../src/modules/app/icons.js')
       }),
       extensions: configs.extensions()
     },

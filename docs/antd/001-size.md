@@ -83,7 +83,7 @@ chunks/1-1ca756a4.js (10.06 KB)
 ```
 
 ## modules/icons.js
-
+> 注意，这里如果不处理，会出现 atnd 还是会被引用，导致包大小还是很大。
 ```js
 // export what you need
 export { default as SmileOutline } from '@ant-design/icons/lib/outline/SmileOutline';

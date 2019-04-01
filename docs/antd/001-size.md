@@ -58,6 +58,7 @@ import { DatePicker } from 'antd';
 ```
 
 ## webpack + external 方式优化
+
 > 需要引处这个，放在 global 去.
 
 ```html
@@ -71,4 +72,35 @@ chunks/0-1ca756a4.js (1.14 MB)
 main/main-1ca756.js (659.22 KB)
 chunks/2-1ca756a4.js (13.95 KB)
 chunks/1-1ca756a4.js (10.06 KB)
+```
+
+## antd + icons:
+
+```js
+{
+  '@ant-design/icons/lib/dist$': path.resolve(__dirname, '../src/modules/icons.js')
+}
+```
+
+## modules/icons.js
+
+```js
+// export what you need
+export { default as SmileOutline } from '@ant-design/icons/lib/outline/SmileOutline';
+export { default as MehOutline } from '@ant-design/icons/lib/outline/MehOutline';
+```
+
+## 直接 antd 走 CDN
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.15.2/antd.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/antd/3.15.2/antd.min.js"></script>
+```
+
+```js
+externals: nx.mix(
+  configs.externals.react(),
+  configs.externals.moment(),
+  configs.externals.antd()
+),
 ```

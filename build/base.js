@@ -1,6 +1,11 @@
 import config from './config';
+import path from 'path';
 import { loaders, plugins, configs, inputs, outputs } from 'webpack-app-kits';
 import 'next-flatten';
+
+console.log(
+  nx.mix(configs.externals.react(), configs.externals.moment(), configs.externals.antd())
+);
 
 export default (inEnv) => {
   const type = inEnv ? inEnv.type : null;
@@ -13,7 +18,12 @@ export default (inEnv) => {
     output: outputs.spa({
       publicPath
     }),
-    resolve: { alias: configs.alias(), extensions: configs.extensions() },
+    resolve: {
+      alias: configs.alias({
+        '@ant-design/icons/lib/dist$': path.resolve(__dirname, '../src/modules/icons.js')
+      }),
+      extensions: configs.extensions()
+    },
     module: {
       rules: nx.flatten([
         loaders.babel(),
@@ -25,7 +35,11 @@ export default (inEnv) => {
         loaders.font()
       ])
     },
-    externals: nx.mix(configs.externals.react(), configs.externals.moment()),
+    externals: nx.mix(
+      configs.externals.react(),
+      configs.externals.moment(),
+      configs.externals.antd()
+    ),
     optimization: configs.optimization(),
     performance: configs.performance(),
     plugins: nx.flatten([

@@ -3,10 +3,6 @@ import path from 'path';
 import { loaders, plugins, configs, inputs, outputs } from 'webpack-app-kits';
 import 'next-flatten';
 
-console.log(
-  nx.mix(configs.externals.react(), configs.externals.moment(), configs.externals.antd())
-);
-
 export default (inEnv) => {
   const type = inEnv ? inEnv.type : null;
   const mode = process.env.NODE_ENV;

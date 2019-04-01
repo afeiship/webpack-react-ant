@@ -91,6 +91,12 @@ export { default as MehOutline } from '@ant-design/icons/lib/outline/MehOutline'
 ```
 
 ## 直接 antd 走 CDN
+~~~
+注意，这里需要去掉这个插件： ["import", { "libraryName": "antd", "libraryDirectory": "lib" }, "ant"]
+否则，还会打包antd里的内容进去
+~~~
+
+
 
 ```html
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.15.2/antd.min.css" />
@@ -104,3 +110,4 @@ externals: nx.mix(
   configs.externals.antd()
 ),
 ```
+

@@ -26,6 +26,11 @@ export default class extends ReduxAppBase {
   }
 
   componentDidMount() {
+    const arr1 = [1,2,3];
+    const arr2 = [2,3,4, { name:'fei'}];
+    const arr3 = [ ...arr1, ...arr2];
+    console.log(arr3);
+
     console.log(require('assets/config/config1.json'));
 
     nx.$memory = {
